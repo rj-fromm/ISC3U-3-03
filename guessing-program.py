@@ -9,16 +9,20 @@ import random
 
 def main():
 
-    random_number = random.randint(1, 100+1)
 
-    secret_number = int(input("Guess my secret number : "))
+    try:
+        random_number = random.randint(1, 100+1)
 
-    if secret_number == random_number:
-        print("WOW! YOU GUESSED THE RANDOM NUMBER! WHAT DO YOU WANT? A MEDAL")
+        secret_number = int(input("Guess my secret number : "))
 
-    else:
-        print("The random number was", (random_number))
+        if secret_number == random_number:
+            print("WOW! YOU GUESSED THE RANDOM NUMBER! WHAT DO YOU WANT? A MEDAL")
 
+        else:
+            print("The random number was", (random_number))
+
+    except Exception:
+        print("Enter a real number")
 
 if __name__ == "__main__":
     main()
